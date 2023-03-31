@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+
+.sidebar_container{
+    height: 100vh;
+    width: 20%;
+    background-color: black;
+    color: white;
+}
+.sidebar_container_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    border-bottom: 1px solid gray ;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.sidebar_options{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar_list{
+    margin-top: 50px;
+    font-size: 25px;
+    font-family:'Roboto Condensed', sans-serif; 
+    cursor: pointer;
+    color:white;
+}
+
+.sidebar_list:hover{
+    color: gray;
+}
+
+li {
+    margin-top: 30px;
+}
+
+.sidebar_icons{
+    margin-right: 5px;
+}

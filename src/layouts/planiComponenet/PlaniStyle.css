@@ -1,0 +1,49 @@
+.text_sizing {
+    text-align: center;
+    font-size: 13px;  
+     
+}
+
+.label_style{
+
+}
+
+.container_select{
+    border: 1px green solid;
+    padding: 20px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.container_item {
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    margin-top:3px;    
+}
+
+
+
+.item {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    
+    /* Añade transición para suavizar el cambio de posición */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .item:nth-child(odd) {
+    /* Establece los elementos impares de la primera fila como horizontales */
+    transform: translateY(-50%);
+  }
+  
+  .item:nth-child(even) {
+    /* Establece los elementos pares de la primera fila como horizontales */
+    transform: translateY(50%);
+  }
+  
+  .item:nth-child(n+4) {
+    /* Cuando se llegue a la cuarta fila, se establece el valor translateY de vuelta a cero para que los elementos se alineen verticalmente */
+    transform: translateY(0);
+  }

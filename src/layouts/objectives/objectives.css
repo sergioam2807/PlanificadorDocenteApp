@@ -1,0 +1,96 @@
+.container_item {
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    margin-top:3px;    
+}
+.container_principal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+}
+
+
+.container_card{
+    flex-direction: column;
+    display: flex;
+    align-content: space-between;
+    margin-bottom: 30px;
+    width: 300px;
+    height: 350px;
+    border: 1px black solid;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.container_title{
+    display: flex;
+    justify-content: center; 
+    border-radius: 20px 20px 0px 0px;
+    font-size: 20px;
+    height: 10vh;
+    background-color: rgb(168, 208, 141);
+    position: relative;
+}
+.container_title p {
+    display: flex;
+    align-items: center;
+}
+
+.container_title::before {   
+    content: "";
+    width: 100%;
+    height: 77px;
+    position: absolute;
+    bottom: -0.3%;
+    left: 0;
+    background-size: auto;
+    background-repeat: repeat no-repeat;
+    background-position: 56vw bottom;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  95' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 69L50 65C100 61 200 52 300 35C400 18 500 -7 600 1C700 10 800 52 900 69C1000 86 1100 78 1150 74L1200 69V95H1150C1100 95 1000 95 900 95C800 95 700 95 600 95C500 95 400 95 300 95C200 95 100 95 50 95H0V69Z' fill='%23FFF5EE'/></svg>");
+  }
+
+.container_objetivo_aprendizaje{
+    flex-grow: 1;
+    margin-top: 5px; 
+}
+
+.title_objetivo{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 10px 10px 0px ;
+}
+
+.texto_objetivo{
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 11px;
+    padding: 10px;
+}
+
+.container_button{
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    width: 100%;
+    border-radius: 0px 0px 20px 20px;
+    position: absolute; /* Agregado */
+    bottom: 0;
+}
+
+.boton_objetivo{
+    border: 1px solid rgb(168, 208, 141);
+    background-color: rgb(168, 208, 141);
+    border-radius: 20px;
+    margin: 7px;
+    padding: 6px;
+}
+
+.boton_objetivo:hover{
+    background-color: #82a469;
+}
