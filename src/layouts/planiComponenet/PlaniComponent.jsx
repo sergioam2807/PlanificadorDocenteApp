@@ -1,11 +1,13 @@
 
 import './../planiComponenet/PlaniStyle.css';
 import { useSelected } from '../../hooks/useSelected';
+import { useState } from 'react';
 
 
-export const PlaniComponent = ({ data, name }) => {
+export const PlaniComponent = ({ data, name, value ,setValue, valueName  }) => {
 
-    const { selectedItems, selectedValue, onSelected, handleAddButtonClick, handleDeleteButtonClick } = useSelected();
+    const { selectedItems, handleAddButtonClick, handleDeleteButtonClick } = useSelected();
+
 
     return (
         <>
@@ -20,9 +22,9 @@ export const PlaniComponent = ({ data, name }) => {
                     <select
                         className='form-select d-flex justify-content-center'
                         id='floatingSelect'
-                        value={selectedValue}
-                        name='selectedValue'
-                        onChange={onSelected}
+                        value={value}
+                        name={valueName}
+                        onChange={setValue}
 
                     >
 
@@ -39,7 +41,12 @@ export const PlaniComponent = ({ data, name }) => {
                         }
 
                     </select>
-                    <button type='button' className='btn btn-info' onClick={handleAddButtonClick}>+</button>
+                    <button type='button' className='btn btn-info' 
+                        onClick={() => {
+                                handleAddButtonClick();
+                                handleDataUpdate();
+                              }
+                            }>+</button>
                 </div>
 
                 <div >
@@ -50,7 +57,10 @@ export const PlaniComponent = ({ data, name }) => {
                                 className="m-2 ">
                                 <button
                                     className=' btn btn-outline-success text_sizing '
-                                    onClick={() => handleDeleteButtonClick(item.id)}>
+                                    onClick={() => {
+                                        handleDeleteButtonClick(item.id);
+                                        handleDataUpdate();
+                                    }}>
                                     {item.name}
                                 </button>
                             </li>

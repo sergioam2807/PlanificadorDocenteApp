@@ -1,5 +1,9 @@
 import { Document, Text, Page, View, StyleSheet, PDFViewer, Font, Image } from '@react-pdf/renderer';
+import { PlaniComponent } from '../../planiComponenet/PlaniComponent'; 
 import logo from '../../../img/logo.png';
+import { recursos } from '../../../database/objetivos';
+
+
 const font = Font.register({ family: 'Times-Roman', fontStyle: 'normal', fontWeight: 'heavy' });
 
 const style = StyleSheet.create({
@@ -18,7 +22,10 @@ const style = StyleSheet.create({
 
 
 
-export const PDFDocument = () => {
+export const PDFDocument = ({ curso, profesor, unidad, habilidad, recurso}) => {
+
+
+    
     return (
         <div className='d-flex justify-content-center'>
             <PDFViewer width='80%' height='500px'>
@@ -30,12 +37,12 @@ export const PDFDocument = () => {
                                 <Text style={style.planiTitle}>Planificación Mensual 2023</Text>
                             </View>
                             <View style={style.tableRow}>
-                                <Text style={[style.tableStyle, style.titleStyle]}>CURSO:</Text>
+                                <Text style={[style.tableStyle, style.titleStyle]}>CURSO:{ curso }</Text>
                                 <Text style={[style.tableStyle, style.titleStyle]}>ASIGNATURA: Educación Física</Text>
-                                <Text style={[style.tableStyle, style.titleStyle]}>PROFESOR:</Text>
+                                <Text style={[style.tableStyle, style.titleStyle]}>PROFESOR:{profesor}</Text>
                             </View>
                             <View style={style.tableRow}>
-                                <Text style={[style.tableStyle, style.titleStyle]}>UNIDAD:</Text>
+                                <Text style={[style.tableStyle, style.titleStyle]}>UNIDAD:{unidad}</Text>
                                 <Text style={[style.tableStyle, style.titleStyle]}>TIEMPO DE DURACIÓN:</Text>
                             </View>
                             <View style={style.tableContent}>
@@ -57,13 +64,13 @@ export const PDFDocument = () => {
                                 <Text style={style.tableItems}>RECURSOS</Text>
                             </View>
                             <View style={style.tableRow}>
-                                <Text style={style.tableStyle}>holoholoholoholoholoholoholovs</Text>
-                                <Text style={style.tableStyle}>holo</Text>
-                                <Text style={style.tableStyle}>holo</Text>
-                                <Text style={style.tableStyle}>holo</Text>
-                                <Text style={style.tableStyle}>holo</Text>
-                                <Text style={style.tableStyle}>holo</Text>
-                                <Text style={style.tableStyle}>holo</Text>
+                                <Text style={style.tableStyle}>texto</Text>
+                                <Text style={style.tableStyle}>texto</Text>
+                                <Text style={style.tableStyle}>{ habilidad }</Text>
+                                <Text style={style.tableStyle}>texto</Text>
+                                <Text style={style.tableStyle}>texto</Text>
+                                <Text style={style.tableStyle}>texto</Text>
+                                <Text style={style.tableStyle}>{recurso}</Text>
 
                             </View>
                         </View>
